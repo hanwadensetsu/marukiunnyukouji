@@ -1,0 +1,77 @@
+ @charset "UTF-8";
+html{
+    font-size:100%;/*ユーザー設定の文字サイズを正しく反映*/
+}
+*{
+    box-sizing:border-box;
+}
+img{
+    max-width:100%;/*画像が親要素からはみ出すのを防ぐ*/
+    height:auto;
+    box-sizing:border-box;
+}
+body{
+    background-color:#fff;
+    margin:0;
+    padding:0;
+}
+/*-----------------------------------------------*/
+.pc{display:block !important;}
+.sp{display:none !important;}
+
+@media only screen and (max-width:750px){
+.pc{display:none !important;}
+.sp{display:block !important;}
+}
+
+
+/*-----ヘッダー---------------------------------------*/
+.box{
+margin:5px;
+width:50px;
+height:50px;
+ background-color: #fff;
+}
+
+.display-flex {
+  display: flex;
+list-style:none;
+}
+
+/*----フッター---------------------------------------*/
+footer{
+background-color:black;
+}
+
+
+/*------背景画像固定------------*/
+.fixed-background {
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+ 
+.background-5 {
+  background-image: url("中途採用/tyuuhai.jpg");
+.futoumei{
+background-color:rgba(255, 255, 255, 0.7);
+}
+
+/*-----------------------------------------------------*/
+.tyuuuto{
+width:100%;
+margin:0 auto;
+}
+.tyuuuto th,
+.tyuuuto td{
+padding:0px;
+text-align:center;
+
+}
+.tyuuuto th{
+font-weight:bold;
+
+}
+
+
