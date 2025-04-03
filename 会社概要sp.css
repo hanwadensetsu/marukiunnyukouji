@@ -1,0 +1,78 @@
+ @charset "UTF-8";
+html{
+    font-size:100%;/*ユーザー設定の文字サイズを正しく反映*/
+}
+*{
+    box-sizing:border-box;
+}
+img{
+    max-width:100%;/*画像が親要素からはみ出すのを防ぐ*/
+    height:auto;
+    box-sizing:border-box;
+}
+body{
+    background-color:#fff;
+    margin:0;
+    padding:0;
+}
+/*-----------------------------------------------*/
+.pc{display:block !important;}
+.sp{display:none !important;}
+
+@media only screen and (max-width:750px){
+.pc{display:none !important;}
+.sp{display:block !important;}
+}
+
+
+/*-----ヘッダー---------------------------------------*/
+.box{
+margin:5px;
+width:50px;
+height:50px;
+ background-color: #fff;
+}
+
+.display-flex {
+  display: flex;
+list-style:none;
+}
+
+/*----フッター---------------------------------------*/
+footer{
+background-color:black;
+}
+/*----背景白-------------------------------------------*/
+.kaisyagaiyou{
+background-color:white;
+}
+
+/*------背景画像固定------------*/
+.fixed-background {
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+ 
+.background-2 {
+  background-image: url("会社概要/kaigaihai.jpg");
+.futoumei{
+background-color:rgba(255, 255, 255, 0.7);
+}
+/*------会社概要------------*/
+.kaisya{
+width:80%;
+margin:0 auto;
+}
+.kaisya th,
+.kaisya td{
+border: 1px solid black;
+padding:10px;
+text-align:center;
+background-color:white;
+}
+.kaisya th{
+font-weight:bold;
+background-color:#dedede;
+}
