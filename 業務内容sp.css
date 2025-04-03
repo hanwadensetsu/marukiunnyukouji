@@ -1,0 +1,116 @@
+ @charset "UTF-8";
+html{
+    font-size:100%;/*ユーザー設定の文字サイズを正しく反映*/
+}
+*{
+    box-sizing:border-box;
+}
+img{
+    max-width:100%;/*画像が親要素からはみ出すのを防ぐ*/
+    height:auto;
+    box-sizing:border-box;
+}
+body{
+    background-color:#fff;
+    margin:0;
+    padding:0;
+}
+/*-----------------------------------------------*/
+.pc{display:block !important;}
+.sp{display:none !important;}
+
+@media only screen and (max-width:750px){
+.pc{display:none !important;}
+.sp{display:block !important;}
+}
+
+/*-----ヘッダー---------------------------------------*/
+
+.box1{
+margin:5px;
+width:50px;
+height:50px;
+background-color:#fff;
+}
+.display-flex {
+  display: flex;
+list-style:none;
+}
+/*----フッター---------------------------------------*/
+footer{
+background-color:black;
+}
+/*----文字が出てくる--------------------------------------------*/
+
+.space{
+  height: 10vh;
+}
+.anime-up{
+color: skyblue;
+}
+
+/*text animetions*/
+@keyframes showTextFromBottom{
+  0%{
+    transform: translateY( 100% );
+  }
+  100%{
+    transform: translateY( 0px );
+  }
+}
+.anime-up.displayed span{
+  animation: showText 1s backwards;
+  display: inline-block;
+}
+.anime-up.displayed > span{
+  overflow: hidden;
+}
+.anime-up.displayed > span > span{
+  animation: showTextFromBottom 1s backwards;
+}
+/*------写真------------*/
+.boxes-wrapper{
+  display: flex;
+  justify-content: center;
+  gap: 0px;
+  margin-top: 0;
+}
+.box{
+  width: 300px;
+  height:250px;
+  background-color: rgba(); /*------背景色透明------------*/
+  opacity: 0;
+}
+.box-01.displayed{
+  animation-delay: 0.8s;
+}
+.box-02.displayed{
+  animation-delay: 0.8s;
+}
+.displayed{
+  animation: fadeUp 1s forwards;
+}
+@keyframes fadeUp{
+  0%{opacity:0; transform: translateY(0);}
+100%{opacity:1; transform: translateY(-100px);}
+}
+
+/*------背景画像固定------------*/
+.fixed-background {
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+ 
+.background-3 {
+  background-image: url("業務内容/gyohai.jpg");
+.futoumei{
+background-color:rgba(255, 255, 255, 0.7);
+}
+
+
+/*----背景白-------------------------------------------*/
+.gyoumunaiyou{
+background-color:white;
+}
