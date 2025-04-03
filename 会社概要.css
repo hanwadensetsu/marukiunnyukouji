@@ -46,6 +46,7 @@ a:hover::before {
 .text:hover {
   text-shadow: 0 0 0 #000, 0 1.5em 0 #000; /* 2つの影の位置を上方向に1.5emずつずらす */
 }
+
 /*-----------------------------------------------*/
 .pc{display:block !important;}
 .sp{display:none !important;}
@@ -139,3 +140,4 @@ text-align: center;
 padding: 10px;
 width: auto;
 }
+
