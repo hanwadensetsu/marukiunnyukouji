@@ -1,0 +1,132 @@
+ @charset "UTF-8";
+html{
+    font-size:100%;/*ユーザー設定の文字サイズを正しく反映*/
+}
+*{
+    box-sizing:border-box;
+}
+img{
+    max-width:100%;/*画像が親要素からはみ出すのを防ぐ*/
+    height:auto;
+    box-sizing:border-box;
+}
+body{
+    background-color:#fff;
+    margin:0;
+    padding:0;
+}
+/*-----------------------------------------------*/
+.pc{display:block !important;}
+.sp{display:none !important;}
+
+@media only screen and (max-width:750px){
+.pc{display:none !important;}
+.sp{display:block !important;}
+}
+
+
+/*-----ヘッダー---------------------------------------*/
+.box{
+margin:5px;
+width:50px;
+height:50px;
+ background-color: #fff;
+}
+
+.display-flex {
+  display: flex;
+list-style:none;
+}
+
+/*----フッター---------------------------------------*/
+footer{
+background-color:black;
+}
+/*----背景白-------------------------------------------*/
+.tousya{
+background-color:white;
+}
+
+/*------背景画像固定------------*/
+.fixed-background {
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+ 
+.background-1 {
+  background-image: url("ホーム/背景.jpg");
+.futoumei{
+background-color:rgba(255, 255, 255, 0.7);
+}
+
+/*----文字が出てくる--------------------------------------------*/
+
+.space{
+  height: 10vh;
+}
+.anime-up{
+color: skyblue;
+}
+/*text animetions*/
+@keyframes showTextFromBottom{
+  0%{
+    transform: translateY( 100% );
+  }
+  100%{
+    transform: translateY( 0px );
+  }
+}
+.anime-up.displayed span{
+  animation: showText 1s backwards;
+  display: inline-block;
+}
+.anime-up.displayed > span{
+  overflow: hidden;
+}
+.anime-up.displayed > span > span{
+  animation: showTextFromBottom 0.5s backwards;
+}
+/*----仕事について--------------------------------------------*/
+.sigotonai{
+display: flex;
+margin: 0 auto;
+}
+.image_mouseover_4 {
+    display: flex; /* 子要素を横並びにする */
+    justify-content: center; /* 画像を均等配置する */
+    gap: 10px; /* 画像の間に一定のスペースを追加 */
+    overflow: hidden;
+    width: 100%;
+    background: #fff;
+}
+
+.image_mouseover_4 img {
+    display: block;
+    flex-shrink: 0; /* 画像が縮小されないように固定 */
+    transition-duration: 0.5s;
+}
+
+.image_mouseover_4 img:hover {
+    transform: scale(1.5);
+    transition-duration: 0.5s;
+    opacity: 0.6;
+}
+
+/*----動画---------------------------------------*/
+.video-container{
+width:100%;
+}
+.video-container video{
+width:300px;
+}
+
+/*---お知らせ---------------------------------------*/
+dl{
+text-align:center;
+}
+dt {
+ color:navy;
+/*---下のurl---------------------------------------*/
+
