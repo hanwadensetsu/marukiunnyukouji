@@ -59,46 +59,7 @@
 }
 </style>
 
-<script>
-function showOrHide() {
-    let showpass = document.getElementById("pass");
-    let check = document.getElementById("showpassword");
-    if (check.checked) {
-        showpass.type = "text";
-    } else {
-        showpass.type = "password";
-    }
-}
+<script src="login.js"></script>
 
-let userdata = [
-    { name: "丸木運輸工事株式会社", password: "HanwaMaruki" },
-    { name: "丸木運輸工事株式会社総務部", password: "HanwaSoumu" }
-];
-
-function login() {
-    let loginuser = "";
-    let username = document.getElementById("username").value;
-    let password = document.getElementById("pass").value;
-
-    let found = false;
-    let i = 0;
-
-    while (!found && i < userdata.length) {
-        loginuser = userdata[i];
-        if (loginuser.name === username && loginuser.password === password) {
-            found = true;
-        }
-        i++;
-    }
-
-    if (found) {
-        alert(`ようこそ。${username}さん。`);
-        sessionStorage.setItem('loggedIn', true);
-        window.location.href = "companysyainpage.html";
-    } else {
-        alert("ログインに失敗しました。入力している内容がデータと一致しませんでした。");
-    }
-}
-</script>
 </body>
 </html>
