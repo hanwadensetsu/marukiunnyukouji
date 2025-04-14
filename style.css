@@ -197,16 +197,9 @@ a:hover{
 }
 
 /*----地図-------*/
-.text-contenttizu {
-    display: flex;
-    flex-direction: column; /* タイトルと説明文を上下に配置 */
-    align-items: flex-start; /* 左揃え */
-    max-width: 50%; /* テキスト部分の最大幅 */
-    line-height: 1.5;
-}
-
 .txt3 {
     display: flex;
+    justify-content:center;
     overflow: hidden;
 }
 
@@ -341,25 +334,22 @@ background-color:white;
     object-fit: cover; /* 画像を親要素に収める */
 }
 /*---地図-------------------------------------------------------*/
-.container2 {
-    display: flex; /* 横並びに配置 */
-    align-items: center; /* 縦方向を中央揃え */
-    gap: 100px; /* 要素間の余白 */
-    width: 100%; /* 全体幅を親要素に合わせる */
-    flex-wrap: wrap; /* 画面幅が狭い場合に折り返しを許可 */
-}
 
-.map {
-    width: 40%; /* 地図の横幅を調整 */
-    height: 50vh; /* 高さをビューポートの50%に設定 */
-    border: 0; /* 枠線を削除 */
-　　margin-right: 100px; /* iframeと説明文の間にスペースを追加 */
-}
+        #map {
+            flex: 1;
+        }
+        #content {
+            flex: 1;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        p {
+            margin-top: 0;
+            text-align:center;
+        }
 
-.description {
-    font-size: 1.5vw; /* 説明文のフォントサイズを調整 */
-    text-align: left; /* 左揃え */
-}
+
+
 
 /*---仕事内容-------------------------------------------------------*/
 .sigotonai{
